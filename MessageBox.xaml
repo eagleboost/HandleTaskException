@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:TaskExceptionApp"
         mc:Ignorable="d" SizeToContent="Width"
-        Title="MessageBox" Height="250">
+        Title="MessageBox" Height="250" WindowStartupLocation="CenterOwner">
   <Grid Margin="7">
     <Grid.RowDefinitions>
       <RowDefinition Height="*"/>
@@ -13,6 +13,6 @@
       <RowDefinition Height="Auto"/>
     </Grid.RowDefinitions>
     <TextBlock x:Name="Message"/>
-    <Button Grid.Row="2" x:Name="CloseButton" Width="74" HorizontalAlignment="Right">Close</Button>
+    <Button Grid.Row="2" x:Name="CloseButton" Width="74" HorizontalAlignment="Right" IsDefault="True" IsCancel="True">Close</Button>
   </Grid>
 </Window>

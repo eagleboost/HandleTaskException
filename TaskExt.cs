@@ -1,6 +1,7 @@
 namespace TaskExceptionApp
 {
   using System;
+  using System.Threading;
   using System.Threading.Tasks;
   using System.Windows;
   using System.Windows.Threading;
@@ -16,6 +17,19 @@ namespace TaskExceptionApp
         if (t.Exception != null)
         {
           dispatcher.BeginInvoke(() => throw new AggregateException(context, t.Exception.InnerExceptions));
+        }
+      }, FaultedFlag);
+      
+      return task;
+    }
+    
+    public static Task WhenFaultedAsync(this Task task, SynchronizationContext syncContext, string context)
+    {
+      task.ContinueWith(t =>
+      {
+        if (t.Exception != null)
+        {
+          syncContext.Post(_ => throw new AggregateException(context, t.Exception.InnerExceptions), null);
         }
       }, FaultedFlag);
       

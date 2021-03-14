@@ -15,6 +15,7 @@
   
   <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
     <Button Content="Unobserved" Click="ButtonBase_OnClick_Unobserved" />
+    <TextBlock Width="200" x:Name="UnobservedStatus" Margin="3,0"></TextBlock>
     <Button Content="ContinueWith" Click="ButtonBase_OnClick_ContinueWith" />
     <Button Content="WhenFaulted" Click="ButtonBase_OnClick_WhenFaulted" />
   </StackPanel>
