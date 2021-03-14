@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.TaskExceptionApp.iml
+/contentModel.xml
+# Datasource local storage ignored files
+/../../../../../../../../:\Users\eagle\My Projects\TaskExceptionApp\.idea\.idea.TaskExceptionApp\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
